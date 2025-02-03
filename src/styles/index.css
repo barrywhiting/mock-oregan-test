@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat';
+  background-image: url('../images/background.jpg');
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+header {
+  color: #ffffff;
+}

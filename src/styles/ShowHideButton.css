@@ -1,0 +1,21 @@
+.icon {
+    margin-top: 0.3rem;
+    height: 2.2rem;
+    width: 13%;
+    cursor: pointer;
+    float: right;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 2.5rem 2.5rem;
+}
+
+.hideIcon {
+    background-color: #6d9eeb;
+    background-image: url(../images/hideIcon.svg);
+}
+
+.hideIcon:focus,
+.showIcon{
+    background-color: #ff0000;
+    background-image: url(../images/showIcon.svg);
+}

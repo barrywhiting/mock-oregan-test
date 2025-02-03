@@ -1,0 +1,10 @@
+.button {
+    clear: both;
+    background-color: #666666;
+    display: inline-block;
+    color: #000000;
+    height: 2.0rem;
+    width: 10.0rem;
+    padding-top: 0.8rem;
+    cursor: pointer;
+}

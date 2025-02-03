@@ -1,0 +1,51 @@
+.textBox[contenteditable='true'] {
+    outline: 0px solid transparent;
+    border: 0.2rem solid transparent;
+    color: #000000;
+    padding: 0.3rem;
+    margin: 0.3rem;
+    background-color: #6d9eeb;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+    text-align: center;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 1.2rem;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.textBox[contenteditable='true']:focus {
+    border-color: #f9cb9c;
+    caret-color: #000000;
+}
+
+.password {
+    display: inline-block;
+    float: left;
+    width: 80% !important;
+    margin-bottom: 0.5rem;
+}
+
+.passwordBoxWrapper {
+    width: 99%;
+    height: 3.6rem;
+    margin-bottom: 0.2rem;
+}
+
+.boxWrapper {
+    width: 94%;
+    padding-bottom: 0.4rem;
+}
+
+.clear {
+    clear: both;
+    margin-bottom: 1.0rem;
+}
+
+.textWrapper {
+    flex-shrink: 0;
+}

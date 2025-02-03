@@ -1,0 +1,26 @@
+.errorText {
+    display: block;
+    color: #ff0000;
+    height: 0.6rem;
+    margin-left: 0.2rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.6rem;
+    clear: both;
+}
+
+.hideError {
+    display: none;
+}
+
+.showError {
+    display: block;
+}
+
+.passwordError {
+    padding-top: 1.8rem !important;
+    padding-bottom: 1.8rem !important;
+}
+
+#password1error {
+    height: 0.8rem;
+}
