@@ -100,7 +100,6 @@ const TextEntry = forwardRef((props, ref) => {
                     .has().not().spaces()                           // Should not have spaces
                     .is().not().oneOf(['Passw0rd', 'Password123']); // Blacklist these values
                 const validPassword = schema.validate(textValue);
-                console.log('VALID PASSWORD ' + textValue)
                 setPasswordError(validPassword);
             }, 100);
         }
@@ -211,23 +210,19 @@ const TextEntry = forwardRef((props, ref) => {
 
         const hasValidSiblingText = siblingTextValue !== '' && siblingTextValue === siblingDefaultText;
         const hasInvalidSiblingText = siblingTextValue !== '' && siblingTextValue !== siblingDefaultText;
-        console.log(hasValidSiblingText + '  ' + siblingTextValue)
         // There is valid text for the parent ref and it is in focus
         if(hasValidSiblingText &&
             parentTextValue !== '' &&
             parentTextValue !== parentDefaultText) {
-                console.log('IN IF')
                 siblingRef.setTextBoxText(siblingTextValue);
                 textValue = parentTextValue;
         // Parent is out of focus but sibling is in focus and has valid text
         } else if(hasValidSiblingText &&
             siblingTextValue !== parentDefaultText) {
-                console.log('IN ELSE IF 1')
                 siblingRef.setTextBoxText(siblingTextValue);
                 textValue = '';
         // Sibling is out of focus but does still have valid text so set to an empty string
         } else if(hasValidSiblingText) {
-            console.log('IN ELSE IF 2')
                 siblingRef.setTextBoxText(siblingTextValue);
                 textValue = '';
         // Parent is in focus and there is valid sibling string so set both the parent and 
@@ -235,7 +230,6 @@ const TextEntry = forwardRef((props, ref) => {
         } else if(parentTextValue !== '' &&
             parentTextValue !== parentDefaultText &&
             hasInvalidSiblingText) {
-                console.log('IN ELSE IF 3')
                 parentRef.setTextBoxText(parentTextValue);
                 siblingRef.setTextBoxText(siblingTextValue);
                 textValue = parentTextValue;
@@ -244,7 +238,6 @@ const TextEntry = forwardRef((props, ref) => {
             parentInput &&
             parentTextValue !== ''
         ) {
-            console.log('IN ELSE IF 4')
             parentTextValue = parentInput;
             textValue = parentTextValue;
         }
